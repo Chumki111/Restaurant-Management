@@ -72,7 +72,7 @@ const Navbar = () => {
           <div className="-mr-2 flex lg:hidden">
             <button
               onClick={handleDrawerToggle}
-              className="inline-flex items-center justify-center p-2 rounded-md text-black hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+              className="inline-flex items-center justify-center p-2 rounded-md text-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-primary focus:ring-white"
             >
               <span className="sr-only">Open main menu</span>
               {mobileOpen ? (

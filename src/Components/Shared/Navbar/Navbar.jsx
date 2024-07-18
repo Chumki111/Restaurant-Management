@@ -11,7 +11,7 @@ const navItems = [
 
   {
    route:'All Foods',
-   pathname:'/product'
+   pathname:'/all-food'
   },
 
   {
@@ -41,7 +41,7 @@ const Navbar = () => {
           <div className="flex items-center">
             <div className="flex-shrink-0 cursor-pointer">
               <Link to="/">
-              <h2 className='text-2xl'><strong className='text-2xl text-primary'>R</strong>estaurant</h2>
+              <h2 className='text-2xl'><strong className='text-2xl text-secondary'>R</strong>estaurant</h2>
               
               </Link>
             </div>
@@ -53,12 +53,12 @@ const Navbar = () => {
                 <Link
                   key={item.pathname}
                   to={item.pathname}
-                  className="hover:text-primary text-xl hover:underline"
+                  className="hover:text-secondary text-xl hover:underline"
                 >
                   {item.route}
                 </Link>
               ))}
-              <button className="relative text-xl bg-primary text-white py-1 px-8 rounded-3xl overflow-hidden group">
+              <button className="relative text-xl bg-secondary text-white py-1 px-8 rounded-3xl overflow-hidden group">
                   <span className="relative z-10 flex items-center space-x-2">
                     <span>Login</span>
                     
@@ -113,7 +113,7 @@ const Navbar = () => {
               </Link>
             ))}
            <div className="divide-y mb-4"></div>
-           <button className="relative text-xl bg-third text-white py-2 px-8 text-center rounded-full overflow-hidden group">
+           <button className="relative text-xl bg-secondary text-white py-2 px-8 text-center rounded-full overflow-hidden group">
                   
                   <span className='z-10 relative'>Login</span>
                   

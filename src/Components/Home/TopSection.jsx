@@ -12,7 +12,7 @@ const TopSection = () => {
         {/* button section */}
         <div className='pt-10 flex justify-center'>
     <Link to="/all-food">
-    <button className=" bg-secondary text-black py-3 px-8 rounded-xl hover:bg-third transition duration-300 ease-in-out">Explore Now</button>
+    <button className=" bg-secondary text-black py-3 px-8 rounded-xl hover:bg-third transition duration-300 ease-in-out">See All Foods</button>
     </Link>
   </div>
       </div>

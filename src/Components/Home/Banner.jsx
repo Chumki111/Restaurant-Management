@@ -7,7 +7,7 @@ const Banner = () => {
 <>
 <div className='flex flex-col'>
 <div className="bg-cover bg-center relative" style={{ backgroundImage: `url(${image})`, minHeight: '550px' }}>
-  <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+  <div className="absolute inset-0 bg-black bg-opacity-60"></div>
   <div className='relative flex items-center justify-center h-full text-center text-neutral-content'>
   <div className='text-white mt-36'>
   <h1 className='text-5xl font-semibold'>Welcome to Restaurant Management</h1>

@@ -1,8 +1,12 @@
-
+import { Helmet } from "react-helmet-async"
 
 const MyProfile = () => {
   return (
-    <div>MyProfile</div>
+    <>
+  <Helmet>
+    <title>Restaurant Management / My Profile</title>
+  </Helmet>
+    </>
   )
 }
 

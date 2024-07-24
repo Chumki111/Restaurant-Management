@@ -1,8 +1,15 @@
+import { Helmet } from "react-helmet-async"
+import PrimaryHero from "../../Components/Hero/PrimaryHero"
 
 
 const AllFood = () => {
   return (
-    <div>AllFood</div>
+    <>
+    <Helmet>
+      <title>Restaurant Management / All Foods</title>
+    </Helmet>
+    <PrimaryHero text="All Foods"/>
+    </>
   )
 }
 

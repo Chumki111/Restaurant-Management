@@ -1,8 +1,11 @@
+import PrimaryHero from "../../Components/Hero/PrimaryHero"
 
 
 const Gallery = () => {
   return (
-   <div className="flex flex-col">
+<>
+<PrimaryHero text="Gallery"/>
+<div className="flex flex-col">
      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mt-12">
         <img src="https://i.postimg.cc/fRn9B0Jr/download.jpg" alt="" className="rounded-md transition duration-300 hover:scale-105 "/>
@@ -20,6 +23,8 @@ const Gallery = () => {
         </div>
     </div>
    </div>
+
+</>
   )
 }
 

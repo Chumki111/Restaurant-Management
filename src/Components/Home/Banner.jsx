@@ -15,7 +15,7 @@ const Banner = () => {
   {/* Button */}
   <div className='pt-10'>
     <Link to="/all-food">
-    <button className="text-xl bg-secondary text-white py-3 px-10 rounded-full hover:bg-third transition duration-300 ease-in-out">Explore Now</button>
+    <button className="text-xl bg-secondary text-black py-3 px-10 rounded-xl hover:bg-third transition duration-300 ease-in-out">Explore Now</button>
     </Link>
   </div>
 </div>

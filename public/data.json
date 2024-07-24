@@ -1,7 +1,7 @@
 [
     {
       "name": "Margherita Pizza",
-      "image": "https://example.com/images/margherita_pizza.jpg",
+      "image": "https://i.postimg.cc/fRn9B0Jr/download.jpg",
       "category": "Italian",
       "price": 8.99,
       "quantity": 50,
@@ -15,7 +15,7 @@
     },
     {
       "name": "Sushi",
-      "image": "https://example.com/images/sushi.jpg",
+      "image": "https://i.ibb.co/PhdYwps/download-3.jpg",
       "category": "Japanese",
       "price": 12.99,
       "quantity": 30,
@@ -29,7 +29,7 @@
     },
     {
       "name": "Tacos",
-      "image": "https://example.com/images/tacos.jpg",
+      "image": "https://i.ibb.co/4jPrSpM/download-4.jpg",
       "category": "Mexican",
       "price": 9.99,
       "quantity": 40,
@@ -43,7 +43,7 @@
     },
     {
       "name": "Butter Chicken",
-      "image": "https://example.com/images/butter_chicken.jpg",
+      "image": "https://i.ibb.co/w6ztdrg/download-6.jpg",
       "category": "Indian",
       "price": 10.99,
       "quantity": 25,
@@ -57,7 +57,7 @@
     },
     {
       "name": "Croissant",
-      "image": "https://example.com/images/croissant.jpg",
+      "image": "https://i.ibb.co/P5bDMKN/download-7.jpg",
       "category": "French",
       "price": 3.99,
       "quantity": 60,
@@ -71,7 +71,7 @@
     },
     {
       "name": "Paella",
-      "image": "https://example.com/images/paella.jpg",
+      "image": "https://i.ibb.co/QHCDjHK/download-8.jpg",
       "category": "Spanish",
       "price": 14.99,
       "quantity": 20,
@@ -85,7 +85,7 @@
     },
     {
       "name": "Tom Yum Soup",
-      "image": "https://example.com/images/tom_yum_soup.jpg",
+      "image": "https://i.ibb.co/M6YR8rc/download-2.jpg",
       "category": "Thai",
       "price": 7.99,
       "quantity": 35,
@@ -99,7 +99,7 @@
     },
     {
       "name": "Peking Duck",
-      "image": "https://example.com/images/peking_duck.jpg",
+      "image": "https://i.ibb.co/mq0fBRg/download-9.jpg",
       "category": "Chinese",
       "price": 18.99,
       "quantity": 15,
@@ -113,7 +113,7 @@
     },
     {
       "name": "Greek Salad",
-      "image": "https://example.com/images/greek_salad.jpg",
+      "image": "https://i.ibb.co/yR4kYcR/download-10.jpg",
       "category": "Greek",
       "price": 6.99,
       "quantity": 45,
@@ -127,7 +127,7 @@
     },
     {
       "name": "Hamburger",
-      "image": "https://example.com/images/hamburger.jpg",
+      "image": "https://i.ibb.co/TrdpxPz/download-13.jpg",
       "category": "American",
       "price": 8.49,
       "quantity": 55,

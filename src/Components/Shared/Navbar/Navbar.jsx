@@ -19,13 +19,10 @@ const navItems = [
     pathname:'/gallery'
   },
   {
-    route: 'Blogs',
-    pathname: '/blogs',
+    route: 'My Profile',
+    pathname: '/my-profile',
   },
-  {
-    route: 'Contact',
-    pathname: '/contact',
-  },
+
 ];
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);

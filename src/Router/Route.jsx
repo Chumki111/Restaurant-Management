@@ -26,11 +26,11 @@ export const Router = createBrowserRouter([
         {
           path:'/my-profile',
           element:<MyProfile/>
+        },
+        {
+          path:'/gallery',
+          element:<Gallery/>
         }
-        // {
-        //   path:'/gallery',
-        //   element:<Gallery/>
-        // }
         ]
     },
   ]);

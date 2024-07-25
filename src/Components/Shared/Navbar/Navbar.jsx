@@ -1,5 +1,5 @@
 import{ useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { FaBars,FaTimes } from 'react-icons/fa';
 import Drawer from 'react-modern-drawer';
 import 'react-modern-drawer/dist/index.css';
@@ -46,15 +46,15 @@ const Navbar = () => {
           
           <div className="hidden lg:block">
             <div className="ml-10 flex items-baseline space-x-7">
-              {navItems.map((item) => (
-                <Link
-                  key={item.pathname}
-                  to={item.pathname}
-                  className="hover:text-secondary text-xl hover:underline"
-                >
-                  {item.route}
-                </Link>
-              ))}
+            {navItems.map((item) => (
+                  <NavLink
+                    key={item.pathname}
+                    to={item.pathname}
+                    className={({ isActive }) => isActive ? "text-secondary text-xl underline" : "hover:text-secondary text-xl hover:underline"}
+                  >
+                    {item.route}
+                  </NavLink>
+                ))}
               <button className="relative text-xl bg-secondary text-white py-1 px-8 rounded-3xl overflow-hidden group">
                   <span className="relative z-10 flex items-center space-x-2">
                     <span>Login</span>
@@ -90,10 +90,10 @@ const Navbar = () => {
       >
         <div className="flex flex-col h-full">
           <div className="flex items-center justify-between p-4">
-            <img className="h-10" src={""} alt="favicon" />
+            {/* <img className="h-10" src={""} alt="favicon" /> */}
             <button
               onClick={handleDrawerToggle}
-              className="bg-primary text-white p-2 rounded-md"
+              className="bg-secondary/80 text-white p-2 rounded-md"
             >
               <FaTimes className="block h-6 w-6" aria-hidden="true" />
             </button>

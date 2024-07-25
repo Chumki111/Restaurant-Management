@@ -50,7 +50,7 @@ const Navbar = () => {
                   <NavLink
                     key={item.pathname}
                     to={item.pathname}
-                    className={({ isActive }) => isActive ? "text-secondary text-xl underline" : "hover:text-secondary text-xl hover:underline"}
+                    className={({ isActive }) => isActive ? "text-tertiary text-xl underline" : "hover:text-secondary text-xl hover:underline"}
                   >
                     {item.route}
                   </NavLink>

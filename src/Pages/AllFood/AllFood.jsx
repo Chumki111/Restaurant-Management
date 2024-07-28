@@ -3,6 +3,9 @@ import { useQuery } from '@tanstack/react-query';
 import { Helmet } from "react-helmet-async";
 import PrimaryHero from "../../Components/Hero/PrimaryHero";
 import { getAllFoods } from '../../api/foods';
+import FoodCard from '../../Components/Card/FoodCard';
+import Loading from '../../Components/Loading/Loading';
+import Error from '../../Components/Loading/Error';
 
 const AllFood = () => {
   const [search, setSearch] = useState('');
@@ -16,7 +19,7 @@ const AllFood = () => {
   useEffect(() => {
     const delayDebounceFn = setTimeout(() => {
       refetch();
-    }, 300); // 300ms debounce time
+    }, 100); // 300ms debounce time
 
     return () => clearTimeout(delayDebounceFn);
   }, [search, refetch]);
@@ -28,29 +31,29 @@ const AllFood = () => {
       </Helmet>
       <PrimaryHero text="All Foods" />
       <div className="container mx-auto p-4">
+        <div className="flex justify-center items-start">
         <input
           type="text"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          placeholder="Search for food..."
-          className="mb-4 p-2 border rounded w-full"
+          placeholder="Search for food... by food name"
+          className="mb-4 p-3 border-2 rounded-lg w-full md:w-3/4 lg:w-1/2 focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent mt-7 transition-all duration-300 ease-in-out transform focus:scale-105 shadow-lg"
         />
-        {isLoading && <div>Loading...</div>}
-        {error && <div>Error loading foods</div>}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {foods?.map((food) => (
-            <div key={food._id} className="border p-4 rounded shadow">
-              <img src={food.image} alt={food.foodName} className="w-full h-48 object-cover rounded" />
-              <h2 className="text-xl font-bold mt-2">{food.foodName}</h2>
-              <p>Category: {food.category}</p>
-              <p>Price: ${food.price}</p>
-              <p>Quantity: {food.quantity}</p>
-              <button className="mt-4 bg-blue-500 text-white py-2 px-4 rounded">
-                Details
-              </button>
-            </div>
-          ))}
         </div>
+        
+        {isLoading ? (
+          <Loading />
+        ) : (
+          <>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-16">
+              {foods?.map((food) => <FoodCard key={food._id} food={food} />)}
+            </div>
+            {foods?.length === 0 && (
+              <p className="text-center text-gray-500 mt-4">No foods found</p>
+            )}
+          </>
+        )}
+        {error && <Error message={error.message} />}
       </div>
     </>
   );

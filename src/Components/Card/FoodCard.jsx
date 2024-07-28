@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom"
+import PropTypes from 'prop-types';
+
 const FoodCard = ({food}) => {
   return (
     <div className="max-w-sm rounded overflow-hidden shadow-lg transform transition-transform duration-500 hover:scale-105 hover:shadow-2xl">
@@ -27,5 +29,7 @@ const FoodCard = ({food}) => {
   </div>
   )
 }
-
+FoodCard.propTypes={
+  food:PropTypes.object
+}
 export default FoodCard

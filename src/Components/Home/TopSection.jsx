@@ -8,8 +8,7 @@ const TopSection = () => {
     queryKey: ['services'],
     queryFn: async () => getTopFoods()
   })
-  console.log(foods);
-  return (
+return (
     <div className="flex flex-col">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
        <div className="">

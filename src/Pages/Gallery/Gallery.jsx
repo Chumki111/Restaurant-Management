@@ -14,8 +14,8 @@ const Gallery = () => {
             <div className="flex flex-col">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     {/* images */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mt-12">
-                        <img src="https://i.ibb.co/jV2jZk2/download-1.jpg" alt="" className="rounded-md transition duration-300 hover:scale-105 " />
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mt-12 ">
+                        <img src="https://i.ibb.co/jV2jZk2/download-1.jpg" alt="" className="rounded-md transition duration-300 hover:scale-105 w-[270px] h-[190px] object-fill" />
                         <img src="https://i.ibb.co/4jPrSpM/download-4.jpg" alt="" className="rounded-md transition duration-300 hover:scale-105 w-[270px] h-[190px] object-fill" />
                         <img src="https://i.ibb.co/PhdYwps/download-3.jpg" alt="" className="rounded-md transition duration-300 hover:scale-105 w-[270px] h-[190px] object-fill" />
                         <img src="https://i.ibb.co/w6ztdrg/download-6.jpg" alt="" className="rounded-md transition duration-300 hover:scale-105 w-[270px] h-[190px] object-fill" />

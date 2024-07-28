@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 
 
 const FoodCard = ({food}) => {
@@ -13,13 +14,15 @@ const FoodCard = ({food}) => {
     <div className="px-6 py-4 bg-white">
       <p className="text-gray-600 text-sm mb-2">Category: {food.category}</p>
       <p className="text-gray-600 text-sm mb-2">Quantity: {food.quantity}</p>
-      <button
+     <Link to={`/all-foods/${food._id}`}>
+     <button
        
-        className="mt-4 text-white font-bold py-2 px-4 rounded-full transition duration-300 w-full"
-        style={{ backgroundColor: '#32CD32' }} // tertiary color for the button
-      >
-        Details
-      </button>
+       className="mt-4 text-white font-bold py-2 px-4 rounded-full transition duration-300 w-full"
+       style={{ backgroundColor: '#32CD32' }} // tertiary color for the button
+     >
+       Details
+     </button>
+     </Link>
     </div>
   </div>
   )

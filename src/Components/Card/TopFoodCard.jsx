@@ -12,7 +12,7 @@ const TopFoodCard = ({food}) => {
       <h3 className="text-xl font-semibold text-gray-900">{food.name}</h3>
       <p className="text-gray-500">{food.category}</p>
       <p className="mt-2 text-lg font-bold text-green-600">${food.price}</p>
-      <Link to={`/food-details/${food._id}`}>
+      <Link to={`/all-foods/${food._id}`}>
       <button 
        
         className="mt-4 px-4 py-2 bg-green-500 text-white rounded-full hover:bg-green-600 transition-colors duration-300"

@@ -10,3 +10,8 @@ export const getAllFoods = async (search = '') => {
     const { data } = await axiosSecure(`/all-foods?search=${search}`);
     return data;
 };
+// get single food
+export const getSingleFood = async(id) =>{
+    const {data} = await axiosSecure(`/all-foods/${id}`);
+    return data;
+}

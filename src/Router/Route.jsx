@@ -5,6 +5,8 @@ import AllFood from "../Pages/AllFood/AllFood";
 import MyProfile from "../Pages/Profile/MyProfile";
 import Gallery from "../Pages/Gallery/Gallery";
 import ErrorPage from "../Pages/Error/ErrorPage";
+import SingleFood from "../Pages/Food/SingleFood";
+import { getSingleFood } from "../api/foods";
 
 export const Router = createBrowserRouter([
   // main route
@@ -20,8 +22,13 @@ export const Router = createBrowserRouter([
           element:<Home/>
         },
         {
-          path:'/all-food',
+          path:'/all-foods',
           element:<AllFood/>
+        },
+        {
+    path:'/all-foods/:id',
+    element:<SingleFood/>,
+    loader:({params}) => getSingleFood(params.id)
         },
         {
           path:'/my-profile',

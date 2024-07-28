@@ -11,7 +11,7 @@ const navItems = [
 
   {
    route:'All Foods',
-   pathname:'/all-food'
+   pathname:'/all-foods'
   },
 
   {

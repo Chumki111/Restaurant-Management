@@ -9,7 +9,7 @@ import { FaRegCopyright } from "react-icons/fa6";
 const Footer = () => {
   return (
     <div className="relative">
-      <div className="bg-tertiary/90 bg-cover bg-no-repeat mt-20"
+      <div className="bg-tertiary/90 bg-cover mt-20"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="flex flex-wrap justify-between items-center text-black p-4">
@@ -52,7 +52,7 @@ const Footer = () => {
 
 
           </div>
-          <div className="bg-black h-[2px] mt-28"></div>
+          <div className="bg-black h-[2px] my-10"></div>
           <div className="flex flex-col md:flex-row justify-between items-center mt-5">
             <div className="text-black flex space-x-2 justify-center items-center">
               <FaRegCopyright className='text-sm' />

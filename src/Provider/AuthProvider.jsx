@@ -1,7 +1,8 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
+import PropTypes from 'prop-types';
 import { createContext } from "react"
 import { app } from "../firebase/firebase.config";
-import { createUserWithEmailAndPassword, getAuth, GoogleAuthProvider, signInWithEmailAndPassword, signInWithPopup, updateProfile } from 'firebase/auth'
+import { createUserWithEmailAndPassword, getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from 'firebase/auth'
 export const AuthContext = createContext(null);
 const auth = getAuth(app);
 const googleProvider = new GoogleAuthProvider()
@@ -30,12 +31,30 @@ const AuthProvider = ({ children }) => {
         setLoading(true);
         return signInWithPopup(auth,googleProvider)
     }
+    // log out
+    const logOut=() =>{
+        setLoading(true)
+        return signOut(auth)
+    }
+    // onAuthStateChange
+    useEffect(() =>{
+        const unsubscribe = onAuthStateChanged(auth,createUser =>{
+            setUser(createUser);
+            console.log('CurrentUser-------',createUser);
+            setLoading(false)
+        })
+        return () =>{
+            return unsubscribe
+        }
+    },[])
     const authInfo = {
         user,
         loading,
         createUser,
         signIn,
-        updateUserProfile
+        updateUserProfile,
+        signInWithGoogle,
+        logOut
     }
     return (
         <AuthContext.Provider value={authInfo}>
@@ -43,5 +62,8 @@ const AuthProvider = ({ children }) => {
         </AuthContext.Provider>
     )
 }
-
+// propTypes
+AuthProvider.propTypes = {
+    children: PropTypes.node
+}
 export default AuthProvider

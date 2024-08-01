@@ -55,13 +55,15 @@ const Navbar = () => {
                     {item.route}
                   </NavLink>
                 ))}
-              <button className="relative text-xl bg-secondary text-white py-1 px-8 rounded-3xl overflow-hidden group">
+             <Link to="/sign-up">
+             <button className="relative text-xl bg-secondary text-white py-1 px-8 rounded-3xl overflow-hidden group">
                   <span className="relative z-10 flex items-center space-x-2">
                     <span>Login</span>
                     
                   </span>
                   
                 </button>
+             </Link>
             </div>
             
          

@@ -9,7 +9,7 @@ const TopSection = () => {
     queryFn: async () => getTopFoods()
   })
 return (
-    <div className="flex flex-col">
+    <div className="">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
        <div className="">
          {/* heading section */}
@@ -23,7 +23,7 @@ return (
         </div>
         {/* button section */}
         <div className='pt-10 flex justify-center'>
-    <Link to="/all-food">
+    <Link to="/all-foods">
     <button className=" bg-secondary text-black py-3 px-8 rounded-xl hover:bg-third transition duration-300 ease-in-out">See All Foods</button>
     </Link>
   </div>

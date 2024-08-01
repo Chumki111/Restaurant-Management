@@ -5,7 +5,7 @@ const TopFoodCard = ({food}) => {
   return (
     <div className="relative border border-gray-200 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-1 hover:scale-105">
       {/* food image */}
-    <img src={food.image} alt={food.name} className="w-full h-56 lg:h-48 object-cover transition-transform duration-300 group-hover:scale-110" />
+    <img src={food.image} alt={food.name} className="w-full h-56 lg:h-60 object-cover transition-transform duration-300 group-hover:scale-110" />
     <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 hover:opacity-75 transition-opacity duration-300"></div>
 {/* food content */}
     <div className="relative p-4 bg-white bg-opacity-90 backdrop-filter backdrop-blur-lg rounded-b-lg">

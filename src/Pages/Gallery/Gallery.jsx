@@ -27,9 +27,14 @@ const Gallery = () => {
                     </button> */}
                     {/* images */}
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mt-12 ">
-                        {/* gallery map */}
-                        {galleries?.map((gallery) => (
-                            <div key={gallery.id} className="relative">
+                         {/* gallery map */}
+                         {galleries?.map((gallery, index) => (
+                            <div
+                                key={gallery.id}
+                                className="relative"
+                                data-aos="fade-up"
+                                data-aos-delay={index * 400} // Delay based on index
+                            >
                                 <img
                                     src={gallery.image}
                                     alt={gallery.name}

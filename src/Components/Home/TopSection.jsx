@@ -14,8 +14,8 @@ return (
        <div className="">
          {/* heading section */}
          <div className="mt-12 text-center">
-          <h2 className="text-5xl font-semibold">Top Foods</h2>
-          <p className="mt-4 text-lg">Explore our top-selling dishes crafted with passion and excellence.</p>
+          <h2 className="text-5xl font-semibold" data-aos="fade-down">Top Foods</h2>
+          <p className="mt-4 text-lg" data-aos="fade-down">Explore our top-selling dishes crafted with passion and excellence.</p>
         </div>
         {/* top six foods map */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-12">

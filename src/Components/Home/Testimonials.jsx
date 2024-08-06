@@ -10,9 +10,10 @@ import 'swiper/css/navigation';
 import './styles.css';
 // import required modules
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
-import { RiPauseMiniLine } from "react-icons/ri";
+
 import { Rating } from '@smastrom/react-rating'
 import '@smastrom/react-rating/style.css'
+import { FaColonSign } from "react-icons/fa6";
 
 const Testimonials = () => {
     const {data:testimonials} = useQuery({
@@ -93,7 +94,8 @@ const Testimonials = () => {
         <SwiperSlide key={index}>
           <div className="p-8 w-full md:w-[80%] bg-white rounded-md shadow-xl shadow-[#dbf0d0]">
             <div className="flex justify-between items-center">
-              <RiPauseMiniLine className="text-4xl md:text-5xl lg:text-7xl text-third" />
+              <FaColonSign className="text-4xl md:text-5xl lg:text-7xl text-tertiary" />
+              
               <Rating
                 style={{ maxWidth: 160 }}
                 value={testimonial.rating} // Assuming rating is part of testimonial data

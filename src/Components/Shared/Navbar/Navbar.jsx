@@ -6,6 +6,7 @@ import 'react-modern-drawer/dist/index.css';
 
 const navItems = [
   { route: 'Home', pathname: '/' },
+  { route: 'About Us', pathname: '/about' },
   { route: 'All Foods', pathname: '/all-foods' },
   { route: 'Gallery', pathname: '/gallery' },
   { route: 'My Profile', pathname: '/my-profile' },

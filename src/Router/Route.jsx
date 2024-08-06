@@ -8,6 +8,7 @@ import ErrorPage from "../Pages/Error/ErrorPage";
 import SingleFood from "../Pages/Food/SingleFood";
 import { getSingleFood } from "../api/foods";
 import SignUp from "../Pages/SignUp/SignUp";
+import About from "../Pages/About/About";
 
 export const Router = createBrowserRouter([
   // main route
@@ -21,6 +22,10 @@ export const Router = createBrowserRouter([
         {
           path:'/',
           element:<Home/>
+        },
+        {
+          path:'/about',
+          element:<About/>
         },
         {
           path:'/all-foods',

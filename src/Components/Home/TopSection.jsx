@@ -2,7 +2,7 @@ import { useQuery } from "@tanstack/react-query"
 import { Link } from "react-router-dom"
 import { getTopFoods } from "../../api/foods"
 import TopFoodCard from "../Card/TopFoodCard"
-import Heading from "../Header/Heading"
+import Heading from "../Shared/Header/Heading"
 
 const TopSection = () => {
   const { data: foods } = useQuery({

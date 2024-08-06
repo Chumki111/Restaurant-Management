@@ -1,7 +1,18 @@
 import { useQuery } from "@tanstack/react-query"
 import { getTestimonials } from "../../api/testimonial"
-import Heading from "../Header/Heading"
-
+import Heading from "../Shared/Header/Heading"
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import './styles.css';
+// import required modules
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import { RiPauseMiniLine } from "react-icons/ri";
+import { Rating } from '@smastrom/react-rating'
+import '@smastrom/react-rating/style.css'
 
 const Testimonials = () => {
     const {data:testimonials} = useQuery({
@@ -14,11 +25,58 @@ const Testimonials = () => {
      <div className="">
        {/* heading section */}
       <Heading heading="What Our Customers Say" subHeading="Read the experiences of our satisfied guests and see why they love dining with us."/>
-      {/* top six foods map */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-12">
-       
-      </div>
-      {/* button section */}
+      <div>
+          
+          <div className="flex flex-col md:flex-row items-center justify-center p-4">
+            <div className="md:w-1/3 flex justify-center">
+              <img src="" alt="Testimonial" className="w-80" />
+            </div>
+            <div className="md:w-2/3 w-full mt-4 md:mt-0">
+            <Swiper
+      spaceBetween={30}
+      centeredSlides={true}
+      autoplay={{
+        delay: 2500,
+        disableOnInteraction: false,
+      }}
+      pagination={{
+        clickable: true,
+      }}
+      navigation={true}
+      modules={[Autoplay, Pagination, Navigation]}
+      className="mySwiper py-5"
+    >
+      {testimonials?.map((testimonial, index) => (
+        <SwiperSlide key={index}>
+          <div className="p-8 w-full md:w-[80%] bg-white rounded-md shadow-xl shadow-[#dbf0d0]">
+            <div className="flex justify-between items-center">
+              <RiPauseMiniLine className="text-4xl md:text-5xl lg:text-7xl text-third" />
+              <Rating
+                style={{ maxWidth: 160 }}
+                value={testimonial.rating} // Assuming rating is part of testimonial data
+                readOnly
+              />
+            </div>
+            <p className="text-start py-5 text-xl text-zinc-400 leading-8">
+              {testimonial.comment}
+            </p>
+            <div className="py-5 flex space-x-4">
+              <div className="h-24 w-24">
+                <img src={testimonial.image} alt={testimonial.name} className="h-full w-full object-contain rounded-md" />
+              </div>
+              <div className="pt-2">
+                <h3 className="text-3xl bg-gradient-to-r from-secondary to-tertiary text-transparent bg-clip-text font-bold">{testimonial.name}</h3>
+                <span className="block text-start pt-1">{testimonial.profession}</span>
+              </div>
+            </div>
+          </div>
+        </SwiperSlide>
+      ))}
+    </Swiper>
+            </div>
+          </div>
+        </div>
+      
      
      </div>
     </div>

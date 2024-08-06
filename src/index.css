@@ -9,18 +9,5 @@
     --primary_dark: #E55347;
   }
   
-  @keyframes slideInLeft {
-    from {
-        opacity: 0;
-        transform: translateX(-50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-.slideInLeft {
-    animation: slideInLeft 1s ease forwards;
-}
+ 
 

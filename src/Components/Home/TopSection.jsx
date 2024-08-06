@@ -24,7 +24,9 @@ return (
         {/* button section */}
         <div className='pt-10 flex justify-center'>
     <Link to="/all-foods">
-    <button className=" bg-secondary text-black py-3 px-8 rounded-xl hover:bg-third transition duration-300 ease-in-out">See All Foods</button>
+    <button className="bg-secondary text-black py-3 px-8 rounded-xl shadow-md hover:bg-tertiary hover:shadow-lg transition ease-in-out transform duration-300 hover:scale-105">
+  See All Foods
+</button>
     </Link>
   </div>
        </div>

@@ -15,7 +15,7 @@ const TopFoodCard = ({food}) => {
       {/* button */}
       <Link to={`/all-foods/${food._id}`}>
       <button 
-       className="mt-4 px-4 py-2 bg-green-500 text-white rounded-full hover:bg-green-600 transition-colors duration-300"
+       className="mt-4 bg-tertiary text-black py-2 px-4 rounded-full shadow-md hover:bg-secondary hover:shadow-lg transition ease-in-out transform duration-300 hover:scale-105"
       >
         View Details
       </button>

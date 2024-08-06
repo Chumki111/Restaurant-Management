@@ -1,31 +1,21 @@
-
-import { Link } from 'react-router-dom'
-import image from '../../assets/banner.jpg'
+import { Link } from 'react-router-dom';
+import image from '../../assets/banner.jpg';
 
 const Banner = () => {
- 
   return (
-<>
-<div className='flex flex-col'>
-<div className="bg-cover bg-center relative" style={{ backgroundImage: `url(${image})`, minHeight: '550px' }}>
-  <div className="absolute inset-0 bg-black bg-opacity-60"></div>
-  <div className='relative flex items-center justify-center h-full text-center text-neutral-content'>
-  <div className='text-white mt-36'>
-  <h1 className='text-5xl font-semibold' data-aos="fade-down">Welcome to Restaurant Management</h1>
-  <p className='pt-4'>Discover a world of culinary excellence and hospitality.</p>
-  {/* Button */}
-  <div className='pt-10'>
-    <Link to="/all-food">
-    <button className="text-xl bg-secondary text-black py-3 px-10 rounded-xl hover:bg-third transition duration-300 ease-in-out">Explore Now</button>
-    </Link>
-  </div>
-</div>
-  </div>
-</div>
-</div>
-
-</>
-  )
+    <div className='relative flex flex-col items-center justify-center min-h-screen bg-cover bg-center' style={{ backgroundImage: `url(${image})` }}>
+      <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-black opacity-70"></div>
+      <div className='relative flex flex-col items-center justify-center text-center text-white p-8'>
+        <h1 className='text-5xl font-bold mb-4 animate__animated animate__fadeIn animate__delay-1s'>Welcome to Restaurant Management</h1>
+        <p className='text-lg mb-8 animate__animated animate__fadeIn animate__delay-2s'>Discover a world of culinary excellence and hospitality.</p>
+        <div>
+          <Link to="/all-food">
+            <button className="text-xl bg-secondary text-black py-3 px-10 rounded-xl shadow-md hover:bg-third hover:shadow-lg transform transition duration-300 ease-in-out hover:scale-105">Explore Now</button>
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
 }
 
-export default Banner
+export default Banner;

@@ -38,7 +38,7 @@ const Navbar = () => {
           <div className="flex items-center">
             <div className="flex-shrink-0 cursor-pointer">
               <Link to="/">
-              <h2 className='text-2xl'><strong className='text-2xl text-secondary'>R</strong>estaurant</h2>
+              <h2 className='text-2xl bg-gradient-to-r from-secondary to-tertiary text-transparent bg-clip-text'><strong>R</strong>estaurant</h2>
               
               </Link>
             </div>

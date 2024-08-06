@@ -10,6 +10,7 @@ const Home = () => {
         <title>Restaurant Management</title>
       </Helmet>
       <Banner/>
+      {/* top food section */}
       <TopSection/>
     </div>
   )

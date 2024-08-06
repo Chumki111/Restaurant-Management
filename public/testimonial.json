@@ -1,0 +1,35 @@
+[
+    {
+    
+      "name": "John Doe",
+      "profession": "Food Critic",
+      "rating": 5,
+      "comment": "The food was absolutely delightful! The flavors were exquisite, and the service was top-notch. Highly recommended!",
+      "image": "https://i.postimg.cc/7hR9Fxn6/medium-shot-cartoonish-boy-with-burger-23-2151033868.jpg"
+    },
+    {
+     
+      "name": "Jane Smith",
+      "profession": "Chef",
+      "rating": 4,
+      "comment": "A fantastic dining experience! The ambiance was perfect, and the dishes were beautifully presented. I would love to visit again.",
+      "image": "https://i.postimg.cc/c4KXQnd8/3d-rendering-avatar-design-1258715-60675.jpg"
+    },
+    {
+   
+      "name": "Alex Johnson",
+      "profession": "Restaurant Reviewer",
+      "rating": 5,
+      "comment": "An exceptional restaurant with a great menu. The flavors were vibrant, and the staff was incredibly friendly. A must-visit spot!",
+      "image": "https://i.postimg.cc/bvRTz094/young-man-cafe-restaurant-3d-render-illustration-890887-41767.jpg"
+    },
+    {
+     
+      "name": "Emily Davis",
+      "profession": "Food Blogger",
+      "rating": 4,
+      "comment": "I had a wonderful time dining here. The food was delicious, and the atmosphere was very welcoming. I’ll be sure to spread the word!",
+      "image": "https://i.postimg.cc/fRc7K7pk/3d-illustration-animated-female-character-food-content-creator-local-136974-87.jpg"
+    }
+  ]
+  

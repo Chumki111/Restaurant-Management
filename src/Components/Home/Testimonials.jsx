@@ -28,9 +28,52 @@ const Testimonials = () => {
       <div>
           
           <div className="flex flex-col md:flex-row items-center justify-center p-4">
-            <div className="md:w-1/3 flex justify-center">
-              <img src="" alt="Testimonial" className="w-80" />
-            </div>
+          <div className="md:w-1/3 flex justify-center items-center">
+          <Swiper
+      spaceBetween={30}
+      centeredSlides={true}
+      autoplay={{
+        delay: 2500,
+        disableOnInteraction: false,
+      }}
+      pagination={{
+        clickable: true,
+      }}
+      navigation={true}
+      modules={[Autoplay, Pagination, Navigation]}
+      className="mySwiper py-5"
+    >
+ <SwiperSlide>
+              <div className="relative w-full h-96">
+                <img
+                  src="https://i.postimg.cc/kXzsgg3F/people-creating-food-content-upload-internet-food-lovers-23-2151461665.jpg"
+                  alt="Testimonial"
+                  className="absolute inset-0 w-full h-full object-cover rounded-md transition ease-in-out transform duration-300 hover:scale-105"
+                />
+              </div>
+            </SwiperSlide>
+ <SwiperSlide>
+              <div className="relative w-full h-96">
+                <img
+                  src="https://i.postimg.cc/8CqBFznK/people-enjoying-mexican-barbecue-23-2151000332.jpg"
+                  alt="Testimonial"
+                  className="absolute inset-0 w-full h-full object-cover rounded-md transition ease-in-out transform duration-300 hover:scale-105"
+                />
+              </div>
+            </SwiperSlide>
+ <SwiperSlide>
+              <div className="relative w-full h-96">
+                <img
+                  src="https://i.postimg.cc/gcDkpxhQ/people-creating-food-content-upload-internet-food-lovers-23-2151461620.jpg"
+                  alt="Testimonial"
+                  className="absolute inset-0 w-full h-full object-cover rounded-md transition ease-in-out transform duration-300 hover:scale-105"
+                />
+              </div>
+            </SwiperSlide>
+
+    
+    </Swiper>
+</div>
             <div className="md:w-2/3 w-full mt-4 md:mt-0">
             <Swiper
       spaceBetween={30}

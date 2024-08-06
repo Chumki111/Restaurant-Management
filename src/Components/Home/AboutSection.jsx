@@ -1,4 +1,7 @@
+import { GiFoodTruck } from "react-icons/gi"
 import Heading from "../Shared/Header/Heading"
+import { IoFastFood } from "react-icons/io5"
+import { GrSecure } from "react-icons/gr"
 
 
 const AboutSection = () => {
@@ -8,28 +11,45 @@ const AboutSection = () => {
   heading="About Us" 
   subHeading="Discover who we are, what we stand for, and our commitment to excellence in everything we do." 
 />
-<div className="flex flex-col md:flex-row items-center">
+<div className="flex flex-col md:flex-row items-center justify-between p-4">
    
-   <div className="md:w-[40%] mb-6 md:mb-0">
-     <div className="relative h-80">
+   <div className=" mb-6 md:mb-0">
+     <div className=" h-96 w-[90%]">
        <img
-         src="https://i.postimg.cc/8CqBFznK/people-enjoying-mexican-barbecue-23-2151000332.jpg"
+         src="https://i.postimg.cc/Dzh0ZWry/close-up-appetizing-ramadan-meal-23-2151182546.jpg"
          alt="Company Values"
-         className="absolute inset-0 w-full h-full object-cover rounded-md"
+         className="inset-0 w-full h-full object-cover rounded-md transition ease-in-out transform duration-300 hover:scale-105"
        />
      </div>
    </div>
 
   
-   <div className="md:w-[60%] px-4">
-     <h2 className="text-3xl font-bold text-gray-800">Our Core Values</h2>
-     <p className="mt-2 text-lg text-gray-600">We are committed to delivering excellence through our core values:</p>
-     <ul className="mt-4 list-disc list-inside text-lg text-gray-600">
-       <li>Integrity: Upholding the highest ethical standards in everything we do.</li>
-       <li>Customer Focus: Putting our customers at the center of our decisions.</li>
-       <li>Innovation: Continuously seeking new ways to improve and lead.</li>
-       <li>Excellence: Striving for excellence in every aspect of our work.</li>
-     </ul>
+   <div className="px-4">
+     <h2 className="text-3xl font-bold bg-gradient-to-r from-secondary to-tertiary text-transparent bg-clip-text mb-4">Our Core Values</h2>
+     <p className="mb-4 text-lg text-gray-600">We are committed to delivering excellence through our core values:</p>
+     <div className="flex flex-col gap-4">
+                            <div data-aos="fade-up" className="flex items-center gap-4">
+                                <GrSecure className="text-4xl h-12 w-12 shadow-sm p-4 rounded-full bg-violet-100 dark:bg-tertiary"/>
+                                <p>Quality Products</p>
+
+                            </div>
+                            <div data-aos="fade-up" className="flex items-center gap-4">
+                                <IoFastFood className="text-4xl h-12 w-12 shadow-sm p-4 rounded-full bg-orange-100 dark:bg-secondary"/>
+                                <p>Fast Delivery</p>
+
+                            </div>
+                            <div data-aos="fade-up" className="flex items-center gap-4">
+                                <GiFoodTruck className="text-4xl h-12 w-12 shadow-sm p-4 rounded-full bg-yellow-100 dark:bg-tertiary"/>
+                                <p>Easy Payment method</p>
+
+                            </div>
+                            <div data-aos="fade-up" className="flex items-center gap-4">
+                                <GiFoodTruck className="text-4xl h-12 w-12 shadow-sm p-4 rounded-full bg-yellow-100 dark:bg-secondary"/>
+                                <p>Get Offers</p>
+
+                            </div>
+                        </div>
+    
    </div>
  </div>
     </div>

@@ -1,7 +1,7 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
-import { Helmet } from "react-helmet-async";
-import PrimaryHero from "../../Components/Hero/PrimaryHero";
+import { Helmet } from 'react-helmet-async';
+import PrimaryHero from '../../Components/Hero/PrimaryHero';
 import { getAllFoods } from '../../api/foods';
 import Loading from '../../Components/Loading/Loading';
 import Error from '../../Components/Loading/Error';
@@ -13,20 +13,14 @@ const AllFood = () => {
   const { data: foods, isLoading, error, refetch } = useQuery({
     queryKey: ['allFoods', search],
     queryFn: async () => getAllFoods(search),
-    enabled: false, // Disable automatic query on mount
+    keepPreviousData: true, // Keep previous data while fetching new data
   });
-
-  useEffect(() => {
-    const delayDebounceFn = setTimeout(() => {
-      refetch();
-    }, 100); // 300ms debounce time
-
-    return () => clearTimeout(delayDebounceFn);
-  }, [search, refetch]);
 
   const handleSearchSubmit = (e) => {
     e.preventDefault();
-    refetch();
+    const searchText = e.target.search.value;
+    setSearch(searchText);
+    refetch(); // Refetch data based on the new search term
   };
 
   return (
@@ -36,14 +30,21 @@ const AllFood = () => {
       </Helmet>
       <PrimaryHero text="All Foods" />
       <div className="container mx-auto p-4">
-        <form onSubmit={handleSearchSubmit} className="flex justify-center items-start">
-          <input
-            type="text"
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-            placeholder="Search for food... by food name"
-            className="mb-4 p-3 border-2 rounded-lg w-full md:w-3/4 lg:w-1/2 focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent mt-7 transition-all duration-300 ease-in-out transform focus:scale-105 shadow-lg"
-          />
+        <form onSubmit={handleSearchSubmit} className="relative flex justify-center items-center mt-6">
+          <div className="relative w-full md:w-3/4 lg:w-1/2">
+            <input
+              type="text"
+              name="search"
+              placeholder="Search for food... by food name"
+              className="w-full p-4 pr-20 border-2 border-secondary rounded-lg focus:outline-none focus:ring-2 focus:ring-tertiary transition-all duration-300 ease-in-out shadow-md placeholder-gray-500 text-gray-900"
+            />
+            <button
+              type="submit"
+              className="absolute inset-y-0 right-0 flex items-center px-4 bg-gradient-to-r from-secondary to-tertiary text-white rounded-r-lg shadow-lg hover:opacity-90 transition-all duration-300 ease-in-out transform hover:scale-105 focus:outline-none"
+            >
+              Search
+            </button>
+          </div>
         </form>
 
         {isLoading ? (

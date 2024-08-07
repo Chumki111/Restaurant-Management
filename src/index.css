@@ -1,7 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+body{
+  cursor: none;
+}
 :root {
     --primary-color: #FF6347;
     --secondary-color: #FFD700;

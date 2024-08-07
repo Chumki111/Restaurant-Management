@@ -14,7 +14,7 @@ const AboutSection = () => {
 <div className="flex flex-col md:flex-row items-center justify-between p-4">
    
    <div className=" mb-6 md:mb-0">
-     <div className=" h-96 w-[90%]">
+     <div className=" md:h-96 md:w-[90%] w-full h-full">
        <img
          src="https://i.postimg.cc/Dzh0ZWry/close-up-appetizing-ramadan-meal-23-2151182546.jpg"
          alt="Company Values"

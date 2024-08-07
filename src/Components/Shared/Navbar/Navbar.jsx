@@ -96,7 +96,7 @@ const Navbar = () => {
                 <Link
                   key={item.pathname}
                   to={item.pathname}
-                  className="mt-2 px-3 py-2 text-white text-base font-medium"
+                  className="mt-2 px-3 py-2 text-black text-base font-medium"
                   onClick={handleDrawerToggle}
                 >
                   {item.route}

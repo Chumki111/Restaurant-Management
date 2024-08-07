@@ -29,7 +29,7 @@ const Testimonials = () => {
       <div>
           
           <div className="flex flex-col md:flex-row items-center justify-center p-4">
-          <div className="md:w-1/3 flex justify-center items-center">
+          <div className="md:w-1/3 w-full flex justify-center items-center">
           <Swiper
       spaceBetween={30}
       centeredSlides={true}
@@ -106,8 +106,8 @@ const Testimonials = () => {
               {testimonial.comment}
             </p>
             <div className="py-5 flex space-x-4">
-              <div className="h-24 w-24">
-                <img src={testimonial.image} alt={testimonial.name} className="h-full w-full object-contain rounded-md" />
+              <div className="md:h-24 h-14 md:w-24 h-14">
+                <img src={testimonial.image} alt={testimonial.name} className="h-full w-full object-contain md:rounded-md rounded-full" />
               </div>
               <div className="pt-2">
                 <h3 className="text-3xl bg-gradient-to-r from-secondary to-tertiary text-transparent bg-clip-text font-bold">{testimonial.name}</h3>

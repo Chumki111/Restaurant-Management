@@ -50,7 +50,7 @@ const AllFood = () => {
           <Loading />
         ) : (
           <>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-16">
+            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-16">
               {foods?.map((food) => (
                 <TopFoodCard key={food._id} food={food} />
               ))}

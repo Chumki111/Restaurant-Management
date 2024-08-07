@@ -36,7 +36,7 @@ const Accordion = () => {
     {/* heading section */}
    <Heading heading="Frequently Asked Questions"
         subHeading="Find answers to the most common questions about our restaurant management system"/>
-        <div className="flex flex-col md:flex-row items-center justify-center p-4 gap-10">
+        <div className="flex flex-col md:flex-row items-center justify-center p-4  gap-10">
         <div className="md:w-1/2 w-full mt-4 md:mt-0">
         {accordionItems?.map((item, index) => (
         <AccordionItem
@@ -48,7 +48,7 @@ const Accordion = () => {
         />
       ))}
         </div>
-          <div className="md:w-1/2 flex justify-center items-center">
+          <div className="md:w-1/2 w-full flex justify-center items-center">
           <div className="relative w-full h-96">
                 <img
                   src={image}

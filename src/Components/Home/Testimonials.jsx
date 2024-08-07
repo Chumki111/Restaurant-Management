@@ -23,7 +23,7 @@ const Testimonials = () => {
   return (
     <div className="">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-14">
-     <div className="">
+   
        {/* heading section */}
       <Heading heading="What Our Customers Say" subHeading="Read the experiences of our satisfied guests and see why they love dining with us."/>
       <div>
@@ -123,7 +123,7 @@ const Testimonials = () => {
         </div>
       
      
-     </div>
+     
     </div>
   </div>
   )

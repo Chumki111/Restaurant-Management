@@ -4,7 +4,7 @@ import Footer from "../Components/Shared/Footer/Footer"
 import { useEffect } from 'react';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
-import CustomCursor from "../Components/Shared/CustomCursor";
+import CustomCursor from "../Components/Shared/CustomCursor/CustomCursor";
 
 const MainLayout = () => {
   useEffect(() => {

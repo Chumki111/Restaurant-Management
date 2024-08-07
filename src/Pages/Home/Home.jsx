@@ -3,6 +3,7 @@ import Banner from "../../Components/Home/Banner"
 import TopSection from "../../Components/Home/TopSection"
 import Testimonials from "../../Components/Home/Testimonials"
 import AboutSection from "../../Components/Home/AboutSection"
+import Accordion from "../../Components/Shared/Accordion/Accordion"
 
 
 const Home = () => {
@@ -16,6 +17,7 @@ const Home = () => {
       {/* top food section */}
       <TopSection/>
       <Testimonials/>
+      <Accordion/>
     </div>
   )
 }

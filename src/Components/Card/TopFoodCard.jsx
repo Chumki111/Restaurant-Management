@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom"
 import PropTypes from 'prop-types';
+import PrimaryButton from "../Button/PrimaryButton";
 
 const TopFoodCard = ({ food }) => {
   return (
@@ -14,11 +15,7 @@ const TopFoodCard = ({ food }) => {
         <p className="mt-2 text-lg font-bold text-green-600">${food.price}</p>
         {/* button */}
         <Link to={`/all-foods/${food._id}`}>
-          <button
-            className="mt-4 bg-tertiary text-black py-2 px-4 rounded-full shadow-md hover:bg-secondary hover:shadow-lg transition ease-in-out transform duration-300 hover:scale-105"
-          >
-            View Details
-          </button>
+          <PrimaryButton text={'View Details'}/>
         </Link>
       </div>
 

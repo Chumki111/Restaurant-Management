@@ -4,6 +4,7 @@ import TopSection from "../../Components/Home/TopSection"
 import Testimonials from "../../Components/Home/Testimonials"
 import AboutSection from "../../Components/Home/AboutSection"
 import Accordion from "../../Components/Shared/Accordion/Accordion"
+import BlogsSection from "../../Components/Home/BlogsSection"
 
 
 const Home = () => {
@@ -18,6 +19,7 @@ const Home = () => {
       <TopSection/>
       <Testimonials/>
       <Accordion/>
+      <BlogsSection/>
     </div>
   )
 }

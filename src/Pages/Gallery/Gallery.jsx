@@ -30,7 +30,7 @@ const Gallery = () => {
                          {/* gallery map */}
                          {galleries?.map((gallery, index) => (
                             <div
-                                key={gallery.id}
+                                key={gallery._id}
                                 className="relative"
                                 data-aos="fade-up"
                                 data-aos-delay={index * 400} // Delay based on index

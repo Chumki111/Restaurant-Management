@@ -1,7 +1,7 @@
 const Heading = ({heading,subHeading}) => {
   return (
  <>
-  <div className="my-12 text-center">
+  <div className="my-16 text-center">
         <h2 className="text-5xl font-semibold text-center bg-gradient-to-r from-secondary to-tertiary text-transparent bg-clip-text">
           {heading}
         </h2>

@@ -38,7 +38,7 @@ To set up the project locally, follow these steps:
 
 2. Navigate to the project directory:
     ```bash
-    cd blood-unity
+    cd Restaurant-Management
     ```
 
 3. Install dependencies using npm or yarn:

@@ -17,6 +17,14 @@ const Accordion = () => {
       title: "Can the system handle multiple locations?",
       content: "Yes, our system is designed to manage multiple locations, providing centralized control and reporting for all your restaurants.",
     },
+    {
+      title: "What kind of support is available?",
+      content: "We offer 24/7 customer support through various channels including phone, email, and live chat. Our support team is ready to assist you with any issues or questions you may have.",
+    },
+    {
+      title: "Is there a mobile app available?",
+      content: "Yes, our system includes a mobile app that allows you to manage your restaurant's operations on the go. The app provides access to key features and real-time updates.",
+    },
   ];
   const [isActive,setIsActive] = useState(null);
   const handleClick = (index) =>{

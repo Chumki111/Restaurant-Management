@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { Helmet } from 'react-helmet-async';
 import PrimaryHero from '../../Components/Hero/PrimaryHero';
@@ -6,22 +6,32 @@ import { getAllFoods } from '../../api/foods';
 import Loading from '../../Components/Loading/Loading';
 import Error from '../../Components/Loading/Error';
 import TopFoodCard from '../../Components/Card/TopFoodCard';
+import { debounce } from 'lodash';
 
 const AllFood = () => {
   const [search, setSearch] = useState('');
 
-  const { data: foods, isLoading, error, refetch } = useQuery({
+  // Debounced Search Input
+  const debouncedSearch = debounce((value) => {
+    setSearch(value);
+  }, 300); // 300ms debounce time
+
+  const { data: foods, isLoading, error } = useQuery({
     queryKey: ['allFoods', search],
     queryFn: async () => getAllFoods(search),
     keepPreviousData: true, // Keep previous data while fetching new data
   });
 
-  const handleSearchSubmit = (e) => {
-    e.preventDefault();
-    const searchText = e.target.search.value;
-    setSearch(searchText);
-    refetch(); // Refetch data based on the new search term
+  const handleSearchChange = (e) => {
+    debouncedSearch(e.target.value);
   };
+
+  useEffect(() => {
+    // Cleanup debounce on unmount
+    return () => {
+      debouncedSearch.cancel();
+    };
+  }, [debouncedSearch]);
 
   return (
     <>
@@ -30,13 +40,14 @@ const AllFood = () => {
       </Helmet>
       <PrimaryHero text="All Foods" />
       <div className="container mx-auto p-4">
-        <form onSubmit={handleSearchSubmit} className="relative flex justify-center items-center mt-6">
+        <div className="relative flex justify-center items-center mt-6">
           <div className="relative w-full md:w-3/4 lg:w-1/2">
             <input
               type="text"
               name="search"
               placeholder="Search for food... by food name"
               className="w-full p-4 pr-20 border-2 border-secondary rounded-lg focus:outline-none focus:ring-2 focus:ring-tertiary transition-all duration-300 ease-in-out shadow-md placeholder-gray-500 text-gray-900"
+              onChange={handleSearchChange} // Use onChange to fetch as user types
             />
             <button
               type="submit"
@@ -45,7 +56,7 @@ const AllFood = () => {
               Search
             </button>
           </div>
-        </form>
+        </div>
 
         {isLoading ? (
           <Loading />

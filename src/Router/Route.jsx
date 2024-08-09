@@ -43,11 +43,12 @@ export const Router = createBrowserRouter([
         {
           path:'/gallery',
           element:<Gallery/>
-        },
-        {
-          path:'/sign-up',
-     element:<SignUp/>
         }
+       
         ]
     },
+    {
+      path:'/sign-up',
+ element:<SignUp/>
+    }
   ]);

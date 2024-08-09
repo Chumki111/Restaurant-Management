@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import CustomCursor from '../../Components/Shared/CustomCursor/CustomCursor';
+import { imageUpload } from '../../api/utils';
 
 const SignUp = () => {
   const [passwordVisible, setPasswordVisible] = useState(false);
@@ -16,6 +17,12 @@ const SignUp = () => {
     const password = form.password.value;
     const image = form.image.files[0];
     console.log(name, email, password, image);
+    try{
+    const imageData = await imageUpload(image);
+    console.log(imageData);
+    }catch(err){
+      console.log(err);
+    }
   }
 
   return (

@@ -4,7 +4,7 @@ import SecondaryButton from '../Button/SecondaryButton';
 const Banner = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div className='flex flex-col lg:flex-row justify-center items-center space-x-4 relative mt-12'>
+      <div className='flex flex-col lg:flex-row justify-center items-center space-x-4 relative mt-12 min-h-[500px]'>
         
         {/* Text Section */}
         <div className='relative lg:w-1/2' data-aos="fade-up">

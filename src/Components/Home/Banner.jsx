@@ -1,18 +1,28 @@
-import { Link } from 'react-router-dom';
 import image from '../../assets/banner.jpg';
+import SecondaryButton from '../Button/SecondaryButton';
 
 const Banner = () => {
   return (
-    <div className='relative flex flex-col items-center justify-center min-h-[600px] bg-cover bg-center' style={{ backgroundImage: `url(${image})` }}>
-      <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-black opacity-70"></div>
-      <div className='relative flex flex-col items-center justify-center text-center text-white p-8'>
-        <h1 className='text-5xl font-bold mb-4 animate__animated animate__fadeIn animate__delay-1s bg-gradient-to-r from-secondary to-tertiary text-transparent bg-clip-text'>Welcome to Restaurant Management</h1>
-        <p className='text-lg mb-8 animate__animated animate__fadeIn animate__delay-2s'>Discover a world of culinary excellence and hospitality.</p>
-        <div>
-          <Link to="/all-food">
-            <button className="text-xl bg-secondary hover:bg-tertiary text-zinc-800 py-3 px-10 rounded-xl shadow-md hover:bg-third hover:shadow-lg transform transition duration-300 ease-in-out hover:scale-105">Explore Now</button>
-          </Link>
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className='flex flex-col lg:flex-row min-h-[600px] mt-16'>
+         {/* Text Section */}
+         <div className='w-full lg:w-1/2 flex flex-col'>
+          <h1 className='text-4xl lg:text-5xl font-bold mb-4 bg-gradient-to-r from-secondary to-tertiary text-transparent bg-clip-text'>
+            Elevate Your Dining Experience
+          </h1>
+          <p className='text-lg mb-8'>
+            Indulge in the finest culinary delights and impeccable service that will make your dining unforgettable.
+          </p>
+          <div>
+           <SecondaryButton text={'Explore Now'} to="/all-foods"/>
+          </div>
         </div>
+        {/* Image Section */}
+        <div className='w-full lg:w-1/2'>
+          <img src={image} alt="Banner" className='w-full h-full object-cover' />
+        </div>
+
+       
       </div>
     </div>
   );

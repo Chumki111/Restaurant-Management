@@ -2,7 +2,8 @@ import Heading from "../Shared/Header/Heading"
 import 'react-photo-view/dist/react-photo-view.css'; import { PhotoProvider, PhotoView } from 'react-photo-view';
 import { useQuery } from "@tanstack/react-query";
 import { getGallery } from "../../api/gallery";
-import { Link } from "react-router-dom";
+
+import SecondaryButton from "../Button/SecondaryButton";
 
 const GallerySection = () => {
   const { data: galleries } = useQuery({
@@ -23,12 +24,7 @@ const GallerySection = () => {
       </PhotoProvider>
       {/* button section */}
       <div className='pt-10 flex justify-center'>
-        <Link
-          to="/gallery">
-          <button className="bg-secondary text-black py-3 px-8 rounded-2xl shadow-md hover:bg-tertiary hover:shadow-lg transition ease-in-out transform duration-300 hover:scale-105">
-            See All Images
-          </button>
-        </Link>
+       <SecondaryButton text={'See All Images'} to="/gallery"/>
       </div>
     </div>
   )

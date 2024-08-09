@@ -9,6 +9,7 @@ import SingleFood from "../Pages/Food/SingleFood";
 import { getSingleFood } from "../api/foods";
 import SignUp from "../Pages/SignUp/SignUp";
 import About from "../Pages/About/About";
+import Login from "../Pages/Login/Login";
 
 export const Router = createBrowserRouter([
   // main route
@@ -50,5 +51,9 @@ export const Router = createBrowserRouter([
     {
       path:'/sign-up',
  element:<SignUp/>
+    },
+    {
+      path:'/login',
+ element:<Login/>
     }
   ]);

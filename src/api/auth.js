@@ -7,12 +7,12 @@ export const saveUser = async (user) => {
         role: 'customer',
         status: 'Verified'
     }
-    const { data } = await axiosSecure(`/users/${user?.email}`, currentUser)
+    const { data } = await axiosSecure.put(`/users/${user?.email}`, currentUser);
     return data;
 }
 // get token from server
 export const getToken = async(email)=>{
-    const {data} = await axiosSecure.post("jwt",email);
+    const {data} = await axiosSecure.post("/jwt",email);
     console.log('Received token from server',data);
     return data;
 }

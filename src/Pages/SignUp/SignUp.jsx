@@ -2,14 +2,19 @@ import { useState } from 'react';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import CustomCursor from '../../Components/Shared/CustomCursor/CustomCursor';
 import { imageUpload } from '../../api/utils';
-
+import useAuth from '../../Hooks/useAuth';
+import { getToken, saveUser } from '../../api/auth';
+import { Link, useNavigate } from 'react-router-dom';
+import toast from 'react-hot-toast';
+import { ImSpinner10 } from "react-icons/im";
 const SignUp = () => {
   const [passwordVisible, setPasswordVisible] = useState(false);
-
+  const { createUser, updateUserProfile,loading } = useAuth();
+  const navigate = useNavigate()
   const togglePasswordVisibility = () => {
     setPasswordVisible(!passwordVisible);
   };
-  const handleSubmit =async e => {
+  const handleSubmit = async e => {
     e.preventDefault();
     const form = e.target;
     const name = form.name.value;
@@ -17,17 +22,28 @@ const SignUp = () => {
     const password = form.password.value;
     const image = form.image.files[0];
     console.log(name, email, password, image);
-    try{
-    const imageData = await imageUpload(image);
-    console.log(imageData);
-    }catch(err){
+    try {
+      const imageData = await imageUpload(image);
+      console.log(imageData);
+      // create user
+      const result = await createUser(email, password);
+      // update user name and photo
+      await updateUserProfile(name, imageData?.data?.display_url)
+      // save user user data in data base
+      const dbResponse = await saveUser(result?.user)
+      console.log(dbResponse);
+      // get token
+      await getToken(result?.user?.email);
+      navigate('/');
+      toast.success('Registration Successfully')
+    } catch (err) {
       console.log(err);
     }
   }
 
   return (
     <>
-    <CustomCursor />
+      <CustomCursor />
       <div className="min-h-screen flex items-center justify-center p-6">
         <div className="w-full max-w-md  p-8 rounded-lg shadow-lg ">
           <h2 className="text-3xl font-bold mb-6 text-center bg-gradient-to-r from-secondary to-tertiary text-transparent bg-clip-text">Sign Up</h2>
@@ -114,15 +130,31 @@ const SignUp = () => {
               />
             </div>
 
+
             {/* Submit Button */}
             <div className="text-center mt-5">
               <button
                 type="submit"
                 className=" w-full bg-gradient-to-r from-secondary to-tertiary bg-transparent px-4 py-2 rounded-md shadow-2xl transition-all duration-300 transform hover:scale-105"
               >
-                Sign Up
+                {loading ? <ImSpinner10 className='animate-spin m-auto text-xl' /> : 'Sign Up'}
               </button>
             </div>
+            {/* toggle signIn or sign up here */}
+            <div className="text-center mt-4 flex justify-between">
+  
+  <p className="text-sm text-tertiary font-semibold">
+    Already have an account? 
+   
+  </p>
+  
+ <Link to='/Login'>
+ <p className="text-sm text-secondary font-semibold hover:underline">
+   Login Here
+   
+  </p>
+ </Link>
+</div>
           </form>
         </div>
       </div>

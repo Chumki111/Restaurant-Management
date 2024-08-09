@@ -3,6 +3,7 @@ import { Link, NavLink } from 'react-router-dom';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import Drawer from 'react-modern-drawer';
 import 'react-modern-drawer/dist/index.css';
+import useAuth from '../../../Hooks/useAuth';
 
 const navItems = [
   { route: 'Home', pathname: '/' },
@@ -14,6 +15,7 @@ const navItems = [
 
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const {user,logOut} = useAuth()
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -50,9 +52,9 @@ const Navbar = () => {
                   </NavLink>
                 ))}
                 <Link to="/sign-up">
-                  <button className="relative text-xl bg-secondary text-white py-1 px-8 rounded-3xl overflow-hidden group">
+                  <button className="relative text-xl bg-secondary text-white py-1 px-6 rounded-full overflow-hidden group">
                     <span className="relative z-10 flex items-center space-x-2">
-                      <span>Login</span>
+                      <span>Sign Up</span>
                     </span>
                     <div className="absolute inset-0 bg-secondary transition-all duration-300 ease-in-out transform scale-x-0 scale-y-0 group-hover:scale-x-100 group-hover:scale-y-100 origin-center"></div>
                   </button>
@@ -105,7 +107,7 @@ const Navbar = () => {
               <div className="divide-y mb-4"></div>
               <Link to="/sign-up">
                 <button className="relative text-xl bg-secondary text-white py-2 px-8 text-center rounded-full overflow-hidden group">
-                  <span className='z-10 relative'>Login</span>
+                  <span className='z-10 relative'>Sign Up</span>
                   <div className="absolute inset-0 bg-secondary transition-all duration-300 ease-in-out transform scale-x-0 scale-y-0 group-hover:scale-x-100 group-hover:scale-y-100 origin-center"></div>
                 </button>
               </Link>

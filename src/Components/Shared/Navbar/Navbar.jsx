@@ -1,9 +1,11 @@
 import { useState } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { Link} from 'react-router-dom';
 import { FaBars, FaTimes, FaUserCircle } from 'react-icons/fa';
 import Drawer from 'react-modern-drawer';
 import 'react-modern-drawer/dist/index.css';
 import useAuth from '../../../Hooks/useAuth';
+import NavItems from './NavItems';
+import Logo from './Logo';
 
 const navItems = [
   { route: 'Home', pathname: '/' },
@@ -31,31 +33,11 @@ const Navbar = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center">
-              <div className="flex-shrink-0 cursor-pointer">
-                <Link to="/">
-                  <h2 className='text-2xl text-white'>
-                    <strong>R</strong>estaurant
-                  </h2>
-                </Link>
-              </div>
+             <Logo/>
             </div>
 
             <div className="hidden lg:flex items-center">
-              <div className="ml-10 flex items-baseline space-x-7">
-                {navItems.map((item) => (
-                  <NavLink
-                    key={item.pathname}
-                    to={item.pathname}
-                    className={({ isActive }) =>
-                      isActive
-                        ? "text-white text-xl underline"
-                        : "hover:text-white text-xl hover:underline"
-                    }
-                  >
-                    {item.route}
-                  </NavLink>
-                ))}
-              </div>
+              <NavItems items={navItems}/>
 
               {/* Conditional Rendering Based on Loading State */}
               {loading ? (

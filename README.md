@@ -21,7 +21,7 @@ A full-stack Restaurant Management website that offers exceptional food experien
 
 ## Images
 
-![Restaurant Management](https://i.postimg.cc/yxbTJgXG/Restaurant-Management-1.png)
+![Restaurant Management](https://i.postimg.cc/QxqJrmxT/Restaurant-Management-3.png)
 ![Restaurant Management 1](https://i.postimg.cc/d0YjTKrJ/Restaurant-Management-All-Foods.png)
 ![Restaurant Management 2](https://i.postimg.cc/VvpjsyzQ/Restaurant-Management-Gallery.png)
 

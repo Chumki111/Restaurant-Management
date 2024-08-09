@@ -18,7 +18,7 @@ const AboutSection = () => {
             <img
               src="https://i.postimg.cc/Dzh0ZWry/close-up-appetizing-ramadan-meal-23-2151182546.jpg"
               alt="Company Values"
-              className="inset-0 w-full h-full object-cover rounded-md transition ease-in-out transform duration-300 hover:scale-105 animate-slide-in"
+              className="inset-0 w-full h-full object-cover rounded-md transition ease-in-out transform duration-300 hover:scale-105"
               data-aos="fade-up"/>
           </div>
         </div>

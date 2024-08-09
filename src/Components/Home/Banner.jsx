@@ -4,10 +4,10 @@ import SecondaryButton from '../Button/SecondaryButton';
 const Banner = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div className='flex flex-col lg:flex-row justify-center items-center space-x-4 relative mt-12 min-h-[500px]'>
+      <div className='flex flex-col md:flex-row justify-center items-center space-x-4 relative  min-h-[500px]'>
         
         {/* Text Section */}
-        <div className='relative lg:w-1/2' data-aos="fade-up">
+        <div className='relative lg:w-1/2 mt-12' data-aos="fade-up">
           <h1 className='text-4xl lg:text-5xl font-bold mb-4 bg-gradient-to-r from-secondary to-tertiary text-transparent bg-clip-text'>
             Elevate Your Dining Experience
           </h1>
@@ -20,11 +20,11 @@ const Banner = () => {
         </div>
         
         {/* Image Section */}
-        <div className='w-full lg:w-1/2 h-full relative'>
+        <div className='w-[60%] lg:w-1/2 h-full relative mt-12' data-aos="fade-right">
           <img 
             src={image} 
             alt="Banner" 
-            className='w-full h-full object-cover transform animate-slide-in'
+            className='w-full h-full object-cover transform'
           />
         </div>
       </div>

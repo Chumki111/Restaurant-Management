@@ -46,7 +46,8 @@ const SignUp = () => {
       <CustomCursor />
       <div className="min-h-screen flex items-center justify-center p-6">
         <div className="w-full max-w-md  p-8 rounded-lg shadow-lg ">
-          <h2 className="text-3xl font-bold mb-6 text-center bg-gradient-to-r from-secondary to-tertiary text-transparent bg-clip-text">Sign Up</h2>
+          <h2 className="text-3xl font-bold mb-6 text-center bg-gradient-to-r from-secondary to-tertiary text-transparent bg-clip-text">Create an Account</h2>
+          {/* form */}
           <form className="space-y-4" onSubmit={handleSubmit}>
             {/* Name Field */}
             <div className="relative">

@@ -115,7 +115,7 @@ const Login = () => {
  
  <Link to='/sign-up'>
  <p className="text-sm text-secondary font-semibold hover:underline">
-    Sign Up Here
+ Create an Account
   </p>
  </Link>
 </div>

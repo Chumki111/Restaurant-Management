@@ -1,11 +1,11 @@
 import { FaCarrot, FaAppleAlt, FaPepperHot, FaLemon } from 'react-icons/fa';
-import image from '../../assets/grilled-lamb.png';
+import image from '../../assets/top.png';
 import SecondaryButton from '../Button/SecondaryButton';
 
 const Banner = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div className='flex flex-col lg:flex-row justify-center items-center space-x-4 relative'>
+      <div className='flex flex-col lg:flex-row justify-center items-center space-x-4 relative mt-12'>
         
         {/* Text Section */}
         <div className='relative lg:w-1/2' data-aos="fade-up">
@@ -45,9 +45,7 @@ const Banner = () => {
           <div className='absolute bottom-4 right-4 flex space-x-4' data-aos="fade-up">
             <FaLemon className='text-secondary text-3xl transform hover:scale-110 transition-transform duration-500 ease-in-out' />
           </div>
-          <div className='absolute bottom-4 left-4 flex space-x-4' data-aos="fade-up">
-            <FaAppleAlt className='text-secondary text-3xl transform hover:scale-110 transition-transform duration-500 ease-in-out' />
-          </div>
+         
         </div>
       </div>
     </div>

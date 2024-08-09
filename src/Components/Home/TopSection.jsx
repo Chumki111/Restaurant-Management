@@ -1,5 +1,4 @@
 import { useQuery } from "@tanstack/react-query"
-import { Link } from "react-router-dom"
 import { getTopFoods } from "../../api/foods"
 import TopFoodCard from "../Card/TopFoodCard"
 import Heading from "../Shared/Header/Heading"

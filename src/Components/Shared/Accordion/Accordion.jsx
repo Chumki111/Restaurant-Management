@@ -1,7 +1,7 @@
 import { useState } from "react";
-import Heading from "../Header/Heading"
+import Heading from "../Header/Heading";
 import AccordionItem from "./AccordionItem";
-import image from '../../../assets/chef-holding.jpg'
+import image from '../../../assets/chef-holding.jpg';
 
 const Accordion = () => {
   const accordionItems = [
@@ -26,42 +26,45 @@ const Accordion = () => {
       content: "Yes, our system includes a mobile app that allows you to manage your restaurant's operations on the go. The app provides access to key features and real-time updates.",
     },
   ];
-  const [isActive,setIsActive] = useState(null);
-  const handleClick = (index) =>{
-    setIsActive(isActive === index ? null : index)
-  }
+
+  const [isActive, setIsActive] = useState(null);
+
+  const handleClick = (index) => {
+    setIsActive(isActive === index ? null : index);
+  };
+
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-14">
-   
-    {/* heading section */}
-   <Heading heading="Frequently Asked Questions"
-        subHeading="Find answers to the most common questions about our restaurant management system"/>
-        <div className="flex flex-col md:flex-row items-center justify-center p-4  gap-10">
+      {/* Heading Section */}
+      <Heading
+        heading="Frequently Asked Questions"
+        subHeading="Find answers to the most common questions about our restaurant management system"
+      />
+      <div className="flex flex-col md:flex-row items-center justify-center p-4 gap-10">
         <div className="md:w-1/2 w-full mt-4 md:mt-0">
-        {accordionItems?.map((item, index) => (
-        <AccordionItem
-          key={index}
-          title={item.title}
-          content={item.content}
-          isActive={isActive === index}
-          onClick={() => handleClick(index)}
-        />
-      ))}
+          {accordionItems?.map((item, index) => (
+            <div key={index} data-aos="fade-up" data-aos-delay={index * 100}>
+              <AccordionItem
+                title={item.title}
+                content={item.content}
+                isActive={isActive === index}
+                onClick={() => handleClick(index)}
+              />
+            </div>
+          ))}
         </div>
-          <div className="md:w-1/2 w-full flex justify-center items-center">
+        <div className="md:w-1/2 w-full flex justify-center items-center">
           <div className="relative w-full h-96">
-                <img
-                  src={image}
-                  alt="Testimonial"
-                  className="absolute inset-0 w-full h-full object-cover rounded-md transition ease-in-out transform duration-300 hover:scale-105"
-                />
-              </div>
+            <img
+              src={image}
+              alt="Testimonial"
+              className="absolute inset-0 w-full h-full object-cover rounded-md transition ease-in-out transform duration-300 hover:scale-105"
+            />
           </div>
-         
         </div>
-        
-   </div>
-  )
-}
+      </div>
+    </div>
+  );
+};
 
-export default Accordion
+export default Accordion;

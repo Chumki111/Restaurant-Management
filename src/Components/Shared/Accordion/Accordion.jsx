@@ -58,7 +58,7 @@ const Accordion = () => {
             <img
               src={image}
               alt="Testimonial"
-              className="absolute inset-0 w-full h-full object-cover rounded-md transition ease-in-out transform duration-300 hover:scale-105"
+              className="absolute inset-0 w-full h-full object-cover rounded-md transition ease-in-out transform duration-300 hover:scale-105 "
             />
           </div>
         </div>

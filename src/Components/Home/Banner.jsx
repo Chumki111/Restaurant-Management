@@ -1,4 +1,3 @@
-import { FaCarrot, FaAppleAlt, FaPepperHot, FaLemon } from 'react-icons/fa';
 import image from '../../assets/top.png';
 import SecondaryButton from '../Button/SecondaryButton';
 
@@ -18,19 +17,6 @@ const Banner = () => {
           <div>
             <SecondaryButton text={'Explore Now'} to="/all-foods" />
           </div>
-
-          {/* Vegetable Icon Below Button */}
-          <div className='mt-6 flex justify-center'>
-            <FaCarrot className='text-secondary text-4xl transform hover:scale-110 transition-transform duration-500 ease-in-out' />
-          </div>
-
-          {/* Vegetable Icons */}
-          <div className='absolute   flex space-x-4'>
-            <FaAppleAlt className='text-secondary text-3xl transform hover:scale-110 transition-transform duration-500 ease-in-out' />
-          </div>
-          <div className='absolute top-4 right-4 flex space-x-4'>
-            <FaPepperHot className='text-secondary text-3xl transform hover:scale-110 transition-transform duration-500 ease-in-out' />
-          </div>
         </div>
         
         {/* Image Section */}
@@ -40,12 +26,6 @@ const Banner = () => {
             alt="Banner" 
             className='w-full h-full object-cover transform animate-slide-in'
           />
-           
-          {/* Icons in Image Section */}
-          <div className='absolute bottom-4 right-4 flex space-x-4' data-aos="fade-up">
-            <FaLemon className='text-secondary text-3xl transform hover:scale-110 transition-transform duration-500 ease-in-out' />
-          </div>
-         
         </div>
       </div>
     </div>

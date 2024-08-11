@@ -2,9 +2,11 @@ import { Helmet } from "react-helmet-async"
 import PrimaryHero from "../../Components/Hero/PrimaryHero"
 import { useQuery } from "@tanstack/react-query"
 import { getGallery } from "../../api/gallery"
+import useAuth from "../../Hooks/useAuth"
 
 
 const Gallery = () => {
+    const {user} = useAuth()
     const {data:galleries} = useQuery({
         queryKey:['galleries'],
         queryFn:async() => getGallery()
@@ -19,12 +21,10 @@ const Gallery = () => {
             <PrimaryHero text="Gallery" />
             <div className="flex flex-col">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                {/* <button
-                        // onClick={handleAddClick}
-                        className="bg-primary text-white py-2 px-4 rounded mb-6"
-                    >
-                        Add
-                    </button> */}
+                {/* add button */}
+                <div className="">
+                    
+                </div>
                     {/* images */}
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mt-12 ">
                          {/* gallery map */}
